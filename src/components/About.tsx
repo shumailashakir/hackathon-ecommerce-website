@@ -1,4 +1,4 @@
-// pages/about.js (About Page)
+
 import React from "react";
 import Image from "next/image";
 import girl from "/public/girl.png"; // Import image
