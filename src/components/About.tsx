@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import girl from "/public/girl.png"; // Import image
-import bg from "/public/bg.png"; // Import background image
+
 
 const About = () => {
   return (
