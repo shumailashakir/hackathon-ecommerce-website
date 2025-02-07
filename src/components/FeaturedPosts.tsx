@@ -5,7 +5,7 @@ const FeaturedPosts = () => {
   const posts = [
     {
       id: 1,
-      image: "road.jpg", // Replace with your image URL
+      image: "/road.jpg", // Image path from the public folder
       title: "Loudest à la Madison #1 (L'Integral)",
       description: "We focus on ergonomics and meeting you where you work.",
       date: "22 May 2023",
@@ -14,7 +14,7 @@ const FeaturedPosts = () => {
     },
     {
       id: 2,
-      image: "car.png",
+      image: "/car.png",
       title: "Loudest à la Madison #1 (L'Integral)",
       description: "We focus on ergonomics and meeting you where you work.",
       date: "22 May 2023",
@@ -23,7 +23,7 @@ const FeaturedPosts = () => {
     },
     {
       id: 3,
-      image: "umbrella.jpg",
+      image: "/umbrella.jpg",
       title: "Loudest à la Madison #1 (L'Integral)",
       description: "We focus on ergonomics and meeting you where you work.",
       date: "22 May 2023",
@@ -42,7 +42,16 @@ const FeaturedPosts = () => {
         <div className="mt-10 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
             <div key={post.id} className="bg-white shadow-lg rounded-lg overflow-hidden">
-              <Image src={post.image} alt={post.title} className="w-full h-48 object-cover" />
+              {/* Responsive and Uniform Image */}
+              <div className="relative w-full h-56"> {/* Height set ki gayi responsive design ke liye */}
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill // Naye syntax ka use (layout="fill" ka alternative)
+                  style={{ objectFit: "cover" }} // objectFit ko style prop mein shift kiya gaya
+                  priority
+                />
+              </div>
               <div className="p-6">
                 {post.isNew && (
                   <span className="inline-block bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">

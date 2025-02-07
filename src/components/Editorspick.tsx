@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image';
 
 export default function Home() {
@@ -5,7 +6,7 @@ export default function Home() {
     <div className="container mx-auto px-4 py-8">
       {/* Header */}
       <div className="text-center mb-8">
-        <h2 className="text-2xl font-bold">EDITOR`&apos;`S PICK</h2>
+        <h2 className="text-2xl font-bold">EDITOR&apos;S PICK</h2>
         <p className="text-gray-600">Problems trying to resolve the conflict between</p>
       </div>
 
